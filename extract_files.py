@@ -22,16 +22,16 @@ for folder in subdirs:
         shutil.move(file, negative_destination / new_name)
 
 # repeat for positive images
-positive_path = Path("/home/pmarg/data/positive/train_pbr")
-positive_destination = Path("/home/pmarg/data/positive/imgs")
-positive_destination.mkdir(parents=True, exist_ok=True)
+# positive_path = Path("/home/pmarg/data/positive/train_pbr")
+# positive_destination = Path("/home/pmarg/data/positive/imgs")
+# positive_destination.mkdir(parents=True, exist_ok=True)
 
-subdirs = [x for x in positive_path.rglob("rgb")]
-for folder in subdirs:
-    parent = folder.parent.name
-    files = list(folder.glob("*.png"))
-    for file in tqdm(files, desc=f"Processing {parent}"):
-        new_name = "pos_" + parent + "_" + file.name
-        print("Moved", file, "to", positive_destination / new_name)
-        shutil.move(file, positive_destination / new_name)
+# subdirs = [x for x in positive_path.rglob("rgb")]
+# for folder in subdirs:
+#     parent = folder.parent.name
+#     files = list(folder.glob("*.png"))
+#     for file in tqdm(files, desc=f"Processing {parent}"):
+#         new_name = "pos_" + parent + "_" + file.name
+#         print("Moved", file, "to", positive_destination / new_name)
+#         shutil.move(file, positive_destination / new_name)
         
